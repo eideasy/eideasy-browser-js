@@ -1,3 +1,4 @@
-import Test from './main';
+import createAsiceContainer from './createAsiceContainer';
+import addSignatureAsice from './addSignatureAsice';
 
-export default Test;
+export { createAsiceContainer, addSignatureAsice };
