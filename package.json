@@ -1,0 +1,74 @@
+{
+  "name": "@eid-easy/eideasy-browser",
+  "version": "0.1.0",
+  "description": "Official eID Easy javascript library for web browsers",
+  "main": "dist/eideasy-browser.js",
+  "scripts": {
+    "webpack": "webpack",
+    "env-cmd": "env-cmd",
+    "webpack-serve": "webpack serve",
+    "debug": "node --inspect --inspect-brk ./node_modules/webpack/bin/webpack.js",
+    "build": "npm run webpack -- --env mode=production",
+    "start": "npm run webpack-serve -- --open --env mode=development --watch",
+    "build:debug": "npm run debug -- --env mode=production",
+    "start:debug": "npm run debug -- --env mode=development",
+    "build:analyze": "npm run build --env presets=analyze",
+    "build:compress": "npm run build --env presets=compress",
+    "docs:dev": "vuepress dev docs",
+    "docs:build": "vuepress build docs",
+    "test": "jest",
+    "test:watch": "jest --watch"
+  },
+  "keywords": [
+    "eideasy"
+  ],
+  "author": "",
+  "license": "ISC",
+  "volta": {
+    "node": "14.15.4",
+    "yarn": "1.22.5"
+  },
+  "browserslist": [
+    ">0.2%",
+    "not dead",
+    "not op_mini all"
+  ],
+  "devDependencies": {
+    "@babel/core": "^7.12.10",
+    "@babel/plugin-proposal-class-properties": "^7.12.1",
+    "@babel/plugin-proposal-decorators": "^7.12.12",
+    "@babel/plugin-proposal-export-default-from": "^7.12.1",
+    "@babel/plugin-proposal-object-rest-spread": "^7.12.1",
+    "@babel/plugin-transform-arrow-functions": "^7.12.1",
+    "@babel/plugin-transform-async-to-generator": "^7.12.1",
+    "@babel/plugin-transform-modules-commonjs": "^7.14.0",
+    "@babel/plugin-transform-runtime": "^7.12.10",
+    "@babel/preset-env": "^7.12.11",
+    "@types/jest": "^26.0.23",
+    "@vuepress/plugin-search": "^2.0.0-beta.14",
+    "babel-jest": "^27.0.1",
+    "babel-loader": "^8.2.2",
+    "clean-webpack-plugin": "^3.0.0",
+    "compression-webpack-plugin": "^7.1.2",
+    "core-js": "^3.8.3",
+    "dotenv": "^8.2.0",
+    "ejs-webpack-loader": "^2.2.2",
+    "eslint": "^7.18.0",
+    "eslint-config-airbnb-base": "^14.2.1",
+    "eslint-plugin-import": "^2.22.1",
+    "eslint-plugin-jest": "^24.3.6",
+    "eslint-webpack-plugin": "^2.4.3",
+    "file-saver": "^2.0.5",
+    "html-webpack-plugin": "^5.3.1",
+    "jest": "^27.0.1",
+    "vuepress": "^2.0.0-beta.14",
+    "webpack": "^5.37.1",
+    "webpack-bundle-analyzer": "^4.4.0",
+    "webpack-cli": "^4.4.0",
+    "webpack-dev-server": "^3.11.2",
+    "webpack-merge": "^5.7.3"
+  },
+  "dependencies": {
+    "jszip": "^3.6.0"
+  }
+}
