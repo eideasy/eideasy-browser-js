@@ -1,9 +1,11 @@
 /* eslint-disable import/no-extraneous-dependencies */
 import { saveAs } from 'file-saver';
 import createAsiceContainer from './createAsiceContainer';
+import addSignatureAsice from './addSignatureAsice';
 
 const dom = {
   buttonCreateAsice: document.querySelector('.js-createAsiceContainer'),
+  buttonAddSignatures: document.querySelector('.js-addSignatures'),
 };
 
 function getInitialFiles() {
@@ -11,6 +13,8 @@ function getInitialFiles() {
 }
 
 function getFileContent(file, settings) {
+  // refactor accordign to this https://stuk.github.io/jszip/documentation/api_jszip/file_data.html#about-blob-since-v300
+  // we can use blobs directly
   const reader = new FileReader();
   reader.addEventListener('error', () => {
     console.error(`Error occurred reading file: ${file.name}`);
@@ -35,4 +39,10 @@ dom.buttonCreateAsice.addEventListener('click', async (e) => {
   const fileList = getInitialFiles();
   console.log(fileList);
   getFileContent(fileList[0]);
+});
+
+dom.buttonAddSignatures.addEventListener('click', (e) => {
+  const containers = document.getElementById('containerInput').files;
+  const signature1 = document.getElementById('signature1').value;
+  addSignatureAsice(containers[0], signature1);
 });
