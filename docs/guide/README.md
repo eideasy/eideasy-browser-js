@@ -1,4 +1,4 @@
-# Guide
+# Getting started
 
 ## Important !!
 This package is in active development and not production ready.

@@ -2,6 +2,10 @@ import JSZip from 'jszip';
 /* eslint-disable import/no-extraneous-dependencies */
 import { saveAs } from 'file-saver';
 
+const getSignatureFilename = function getSignatureFilename(signatureId) {
+  return `signatures${signatureId}.xml`;
+};
+
 const addSignatureAsice = function addSignatureAsice(containerFile, xadesSignature) {
   let xmlDoc;
   if (window.DOMParser) {
@@ -19,7 +23,7 @@ const addSignatureAsice = function addSignatureAsice(containerFile, xadesSignatu
 
   JSZip.loadAsync(containerFile) // 1) read the Blob
     .then((zip) => {
-      zip.file(`META-INF/signature${signatureId.toLowerCase()}.xml`, xadesSignature);
+      zip.file(`META-INF/${getSignatureFilename}`, xadesSignature);
       zip.generateAsync({ type: 'blob' })
         .then((containerBlob) => {
           saveAs((containerBlob), 'modified.asice');
