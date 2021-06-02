@@ -6,7 +6,7 @@ module.exports = {
     ['link', { rel: 'icon', href: '/assets/img/eid-easy-icon.png' }],
   ],
   themeConfig: {
-    repo: 'eideasy/eideasy-js-sdk/',
+    repo: '/eideasy/eideasy-browser',
     logo: '/assets/img/eid-easy-logo.png',
     navbar: [
       { text: 'Home', link: '/'},
