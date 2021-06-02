@@ -1,6 +1,4 @@
 import JSZip from 'jszip';
-/* eslint-disable import/no-extraneous-dependencies */
-import { saveAs } from 'file-saver';
 
 const getSignatureFilename = function getSignatureFilename(signatureId) {
   return `signatures${signatureId}.xml`;
@@ -21,15 +19,10 @@ const addSignatureAsice = function addSignatureAsice(containerFile, xadesSignatu
 
   const signatureId = xmlDoc.getElementsByTagName('ds:Signature')[0].getAttribute('Id');
 
-  JSZip.loadAsync(containerFile) // 1) read the Blob
+  return JSZip.loadAsync(containerFile)
     .then((zip) => {
-      zip.file(`META-INF/${getSignatureFilename}`, xadesSignature);
-      zip.generateAsync({ type: 'blob' })
-        .then((containerBlob) => {
-          saveAs((containerBlob), 'modified.asice');
-        });
-    }, (e) => {
-      console.error(`Error reading ${e.message}`);
+      zip.file(`META-INF/${getSignatureFilename(signatureId)}`, xadesSignature);
+      return zip;
     });
 };
 

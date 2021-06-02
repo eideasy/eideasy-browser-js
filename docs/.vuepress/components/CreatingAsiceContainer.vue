@@ -3,6 +3,9 @@ import createAsiceContainer from '../../../src/createAsiceContainer';
 import { saveAs } from 'file-saver';
 
 const init = function init(rootElem) {
+  // import createAsiceContainer from ''; TODO: our library name here
+  // import { saveAs } from 'file-saver';
+
   // rootElem is the parent html element of this demo
   const dom = {
     buttonCreateAsice: rootElem.querySelector('.js-createAsiceContainer'),
@@ -27,7 +30,7 @@ const init = function init(rootElem) {
     container.generateAsync({ type: 'blob' })
       .then((containerBlob) => {
         // we are using https://github.com/eligrey/FileSaver.js/ here to save/download
-        // the final file to the end-user's machine
+        // the final file to the end user's machine
         saveAs((containerBlob), 'container.asice');
       });
   });
