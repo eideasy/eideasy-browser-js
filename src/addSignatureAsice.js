@@ -19,6 +19,10 @@ const addSignatureAsice = function addSignatureAsice(containerFile, xadesSignatu
 
   const signatureId = xmlDoc.getElementsByTagName('ds:Signature')[0].getAttribute('Id');
 
+  if (containerFile instanceof JSZip) {
+    containerFile.file(`META-INF/${getSignatureFilename(signatureId)}`, xadesSignature);
+    return Promise.resolve(containerFile);
+  }
   return JSZip.loadAsync(containerFile)
     .then((zip) => {
       zip.file(`META-INF/${getSignatureFilename(signatureId)}`, xadesSignature);

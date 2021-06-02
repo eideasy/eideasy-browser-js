@@ -1,44 +1,45 @@
 <script>
-
-import addSignatureAsice from '../../../src/addSignatureAsice';
 import { saveAs } from 'file-saver';
+import createAsiceContainer from '../../../src/createAsiceContainer';
+import addSignatureAsice from '../../../src/addSignatureAsice';
 
 const init = function init(rootElem) {
+  // import createAsiceContainer from ''; TODO: our library name here
   // import addSignatureAsice from ''; TODO: our library name here
   // import { saveAs } from 'file-saver';
 
   // rootElem is the parent html element of this demo
   const dom = {
-    buttonAdd: rootElem.querySelector('.js-addSignatures'),
+    buttonCreate: rootElem.querySelector('.js-create'),
+    filesInput: rootElem.querySelector('.js-filesInput'),
     signatureInput: rootElem.querySelector('.js-signature'),
-    containerInput: rootElem.querySelector('.js-containerInput'),
   };
 
-  dom.buttonAdd.addEventListener('click', async (e) => {
+  dom.buttonCreate.addEventListener('click', async (e) => {
     e.preventDefault();
 
-    // You can use a Blob directly as input, no need to use the FileReader object.
+    // You can use Blobs directly as input, no need to use the FileReader object.
     // File objects (https://developer.mozilla.org/en-US/docs/Web/API/File)
     // that you get from the input[type="file"] are Blobs. This means
-    // that you can use them directly as an input for the addSignatureAsice method.
-    const container = await addSignatureAsice(dom.containerInput.files[0], dom.signatureInput.value);
+    // that you can use them directly as an input for the createAsiceContainer method.
+    const files = dom.filesInput.files;
+    const container = createAsiceContainer(files);
 
-    // addSignatureAsice returns a promise that resolves with a JSZip instance.
-    // So, you can use the exact same methods that JSZip (https://github.com/Stuk/jszip) provides.
-    // addSignatureAsice uses JSZip because ASiC-E containers are plain old ZIP files
-    // albeit with a specific structure and contents
+    // createAsiceContainer returns a JSZip instance, which you can directly provide to
+    // the addSignatureAsice method accepts a JSZip instance for the first argument
+    const containerWithSignatures = await addSignatureAsice(container,  dom.signatureInput.value);
 
     // https://stuk.github.io/jszip/documentation/api_jszip/generate_async.html
-    const blob = await container.generateAsync({ type: 'blob' });
+    const blob = await containerWithSignatures.generateAsync({ type: 'blob' });
 
     // we are using https://github.com/eligrey/FileSaver.js/ here to save/download
     // the final file to the end user's machine
-    saveAs((blob), 'modified.asice');
+    saveAs((blob), 'container.asice');
   });
 }
 
 export default {
-  name: 'AddingSignatureExistingContainer',
+  name: 'CreateContainerAddSignature',
   mounted() {
     const rootElem = this.$refs.example;
     init(rootElem);
@@ -52,11 +53,12 @@ export default {
     class="example"
   >
     <div class="formRow">
-      <label for="containerInput">ASiC-E container</label>
+      <label for="containerInput">Files</label>
       <input
-        class="js-containerInput"
+        class="js-filesInput"
         id="containerInput"
         type="file"
+        multiple
       >
     </div>
 
@@ -70,12 +72,11 @@ export default {
       ></textarea>
     </div>
 
-    <button class="js-addSignatures">
-      Add signature and download the container
+    <button class="js-create">
+      Create container, add signature and download
     </button>
   </div>
 </template>
-
 
 <style scoped>
   label {

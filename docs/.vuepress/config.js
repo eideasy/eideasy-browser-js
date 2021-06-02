@@ -33,6 +33,7 @@ module.exports = {
             '/demos/README.md',
             '/demos/create-asice-container.md',
             '/demos/add-xades-signature-to-asice-container.md',
+            '/demos/create-asice-container-add-xades-signature.md',
           ],
         },
       ],
