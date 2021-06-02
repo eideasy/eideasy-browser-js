@@ -5,7 +5,8 @@ an ASiC-E container is created with those files included.
 <CreatingAsiceContainer/>
 
 ## javascript
-@[code{6-37} js](../.vuepress/components/CreatingAsiceContainer.vue)
+@[code{6-42} js](../.vuepress/components/CreatingAsiceContainer.vue)
 
 ## html
-@[code{54-62} html](../.vuepress/components/CreatingAsiceContainer.vue)
+@[code{59-67} html](../.vuepress/components/CreatingAsiceContainer.vue)
+
