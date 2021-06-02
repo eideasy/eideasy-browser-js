@@ -8,7 +8,7 @@ import createManifestFileEntries from './createManifestFileEntries';
  * @param {string|ArrayBuffer|Uint8Array|Buffer|Blob} files[].content
  * @returns {Function} JSZip
  */
-const createAsiceContainer = function createAsiceContainer(files) {
+const createAsiceContainer = function createAsiceContainer(files = []) {
   const zip = new JSZip();
   zip.file('mimetype', 'application/vnd.etsi.asic-e+zip');
   zip.file('META-INF/manifest.xml', `<?xml version="1.0" encoding="UTF-8" standalone="no" ?>
