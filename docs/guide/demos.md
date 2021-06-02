@@ -7,10 +7,10 @@ an ASiC-E container is created with those files included.
 <CreatingAsiceContainer/>
 
 ### javascript
-@[code{6-36} js](../.vuepress/components/CreatingAsiceContainer.vue)
+@[code{6-37} js](../.vuepress/components/CreatingAsiceContainer.vue)
 
 ### html
-@[code{53-61} html](../.vuepress/components/CreatingAsiceContainer.vue)
+@[code{54-62} html](../.vuepress/components/CreatingAsiceContainer.vue)
 
 
 ## Adding XAdES signatures to an existing container
@@ -19,9 +19,9 @@ In this demo, we let the end user choose an ASiC-E container and manually enter 
 <AddingSignatureExistingContainer/>
 
 ### javascript
-@[code{7-36} js](../.vuepress/components/AddingSignatureExistingContainer.vue)
+@[code{7-37} js](../.vuepress/components/AddingSignatureExistingContainer.vue)
 
 ### html
-@[code{53-74} html](../.vuepress/components/AddingSignatureExistingContainer.vue)
+@[code{54-75} html](../.vuepress/components/AddingSignatureExistingContainer.vue)
 
 ## Full flow

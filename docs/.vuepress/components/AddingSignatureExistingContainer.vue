@@ -18,7 +18,8 @@ const init = function init(rootElem) {
     e.preventDefault();
 
     // You can use a Blob directly as input, no need to use the FileReader object.
-    // File objects that you get from the input[type="file"] are Blobs. This means
+    // File objects (https://developer.mozilla.org/en-US/docs/Web/API/File)
+    // that you get from the input[type="file"] are Blobs. This means
     // that you can use them directly as an input for the addSignatureAsice method.
     const container = await addSignatureAsice(dom.containerInput.files[0], dom.signatureInput.value);
 

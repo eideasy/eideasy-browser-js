@@ -16,7 +16,8 @@ const init = function init(rootElem) {
     e.preventDefault();
 
     // You can use Blobs directly as input, no need to use the FileReader object.
-    // File objects that you get from the input[type="file"] are Blobs. This means
+    // File objects (https://developer.mozilla.org/en-US/docs/Web/API/File)
+    // that you get from the input[type="file"] are Blobs. This means
     // that you can use them directly as an input for the createAsiceContainer method.
     const files = dom.fileInput.files;
     const container = createAsiceContainer(files);
