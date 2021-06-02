@@ -20,6 +20,7 @@ const createAsiceContainer = function createAsiceContainer(files = []) {
     const f = files[i];
     zip.file(f.name, f.content);
   }
+
   return zip;
 };
 
