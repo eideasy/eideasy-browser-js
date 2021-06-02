@@ -11,6 +11,7 @@ module.exports = {
     navbar: [
       { text: 'Home', link: '/'},
       { text: 'Guide', link: '/guide/'},
+      { text: 'Demos', link: '/demos/'},
       { text: 'Contributing', link: '/contributing/'},
     ],
     sidebar: {
@@ -20,8 +21,18 @@ module.exports = {
           text: 'Guide',
           children: [
             '/guide/README.md',
-            '/guide/demos.md',
             '/guide/api-reference.md',
+          ],
+        },
+      ],
+      '/demos/': [
+        {
+          isGroup: true,
+          text: 'Demos',
+          children: [
+            '/demos/README.md',
+            '/demos/create-asice-container.md',
+            '/demos/add-xades-signature-to-asice-container.md',
           ],
         },
       ],
