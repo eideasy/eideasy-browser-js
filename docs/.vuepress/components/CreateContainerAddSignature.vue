@@ -26,7 +26,7 @@ const init = function init(rootElem) {
     const container = createAsiceContainer(files);
 
     // createAsiceContainer returns a JSZip instance, which you can directly provide to
-    // the addSignatureAsice method accepts a JSZip instance for the first argument
+    // the addSignatureAsice method as it accepts a JSZip instance for the first argument
     const containerWithSignatures = await addSignatureAsice(container,  dom.signatureInput.value);
 
     // https://stuk.github.io/jszip/documentation/api_jszip/generate_async.html
