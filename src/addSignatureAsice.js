@@ -4,6 +4,12 @@ const getSignatureFilename = function getSignatureFilename(signatureId) {
   return `signatures${signatureId}.xml`;
 };
 
+/**
+ *
+ * @param {JSZip|Blob} containerFile - the container file
+ * @param {string} xadesSignature - XAdES signature
+ * @returns {Promise<JSZip>}
+ */
 const addSignatureAsice = function addSignatureAsice(containerFile, xadesSignature) {
   let xmlDoc;
   if (window.DOMParser) {

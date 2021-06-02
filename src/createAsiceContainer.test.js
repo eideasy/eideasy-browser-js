@@ -1,5 +1,4 @@
 import createAsiceContainer from './createAsiceContainer';
-import createManifestFileEntries from './createManifestFileEntries';
 
 function customTrim(string) {
   // remove newlines and excessive white space
