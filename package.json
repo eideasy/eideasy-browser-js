@@ -24,7 +24,11 @@
   ],
   "repository": {
     "type": "git",
-    "url": "https://github.com/eideasy/eideasy-browser.git"
+    "url": "https://github.com/eideasy/eideasy-browser-js.git"
+  },
+  "bugs": {
+    "url" : "https://github.com/eideasy/eideasy-browser-js/issues",
+    "email" : "mj@eideasy.com"
   },
   "author": "",
   "license": "ISC",
