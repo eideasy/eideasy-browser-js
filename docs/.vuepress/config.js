@@ -1,12 +1,12 @@
 const { path } = require('@vuepress/utils')
 module.exports = {
-  title: 'eideasy-browser',
+  title: 'eideasy-browser-js',
   description: 'Official eID Easy javascript helper library for web browsers',
   head: [
     ['link', { rel: 'icon', href: '/assets/img/eid-easy-icon.png' }],
   ],
   themeConfig: {
-    repo: '/eideasy/eideasy-browser',
+    repo: '/eideasy/eideasy-browser-js',
     logo: '/assets/img/eid-easy-logo.png',
     navbar: [
       { text: 'Home', link: '/'},
