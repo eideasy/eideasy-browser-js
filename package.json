@@ -1,5 +1,5 @@
 {
-  "name": "@eid-easy/eideasy-browser",
+  "name": "@eid-easy/eideasy-browser-js",
   "version": "0.1.0",
   "description": "Official eID Easy javascript helper library for web browsers",
   "main": "dist/eideasy-browser.js",
