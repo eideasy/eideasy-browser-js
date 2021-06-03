@@ -7,9 +7,6 @@ const dotenv = require('dotenv');
 
 const modeConfig = (env) => require(`./build-utils/webpack.${env}`)(env);
 const presetConfig = require('./build-utils/loadPresets');
-const generateHtmlPlugins = require('./build-utils/generateHtmlPlugins');
-
-const htmlPlugins = generateHtmlPlugins(path.resolve(__dirname, 'src/views'));
 
 module.exports = ({
   mode,
@@ -23,7 +20,7 @@ module.exports = ({
     stats: {
       chunks: true,
     },
-    entry: `./src/index-${mode}.js`,
+    entry: './src/main.js',
     output: {
       path: path.resolve(__dirname, 'dist'),
       filename: 'eideasy-browser.js',
@@ -44,7 +41,6 @@ module.exports = ({
     },
     plugins: [
       new CleanWebpackPlugin(),
-      ...htmlPlugins,
       new ESLintPlugin(),
       new webpack.ProgressPlugin(),
       new webpack.DefinePlugin({
