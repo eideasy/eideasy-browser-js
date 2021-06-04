@@ -1,6 +1,6 @@
-  
+
 name: github-release
-on: 
+on:
   push:
     tags:
     - 'v*'
@@ -13,7 +13,7 @@ jobs:
     steps:
       - name: Checkout code
         uses: actions/checkout@v2
-      
+
       - name: Create Release for Tag
         id: release_tag
         uses: yyx990803/release-tag@master
@@ -22,4 +22,4 @@ jobs:
         with:
           tag_name: ${{ github.ref }}
           body: |
-            Please refer to [CHANGELOG.md](https://github.com/eideasy/eideasy-browser-js/blob/main/CHANGELOG.md) for details.
+            Please refer to [CHANGELOG.md](https://github.com/eideasy/eideasy-browser-js/blob/master/CHANGELOG.md) for details.
