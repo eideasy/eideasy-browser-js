@@ -1,6 +1,6 @@
 {
   "name": "@eid-easy/eideasy-browser-js",
-  "version": "0.1.1-alpha.0",
+  "version": "0.1.2-alpha.0",
   "description": "Official eID Easy javascript helper library for web browsers",
   "main": "dist/eideasy-browser.js",
   "scripts": {
