@@ -1,6 +1,6 @@
 {
   "name": "@eid-easy/eideasy-browser-js",
-  "version": "0.1.0",
+  "version": "0.1.1-alpha.0",
   "description": "Official eID Easy javascript helper library for web browsers",
   "main": "dist/eideasy-browser.js",
   "scripts": {
@@ -63,6 +63,7 @@
     "chalk": "^4.1.1",
     "clean-webpack-plugin": "^3.0.0",
     "compression-webpack-plugin": "^7.1.2",
+    "conventional-changelog-cli": "^2.1.1",
     "core-js": "^3.8.3",
     "cz-conventional-changelog": "3.3.0",
     "dotenv": "^8.2.0",
