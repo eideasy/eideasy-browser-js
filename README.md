@@ -7,6 +7,9 @@
   <a href="https://www.npmjs.com/package/@eid-easy/eideasy-browser-js">
     <img src="https://img.shields.io/npm/v/@eid-easy/eideasy-browser-js.svg?sanitize=true" alt="NPM Badge">
   </a>
+  <a href="https://www.npmjs.com/package/@eid-easy/eideasy-browser-js">
+    <img src="https://img.shields.io/npm/l/@eid-easy/eideasy-browser-js.svg?sanitize=true" alt="License Badge">
+  </a>
   <a href="https://app.netlify.com/sites/eideasy-browser-js/deploys">
     <img src="https://api.netlify.com/api/v1/badges/49a66134-1471-49de-9786-c774ca3cc102/deploy-status" alt="Netlify Status">
   </a>
