@@ -51,16 +51,6 @@ module.exports = {
       {
         componentsDir: path.resolve(__dirname, './components'),
       },
-    ],
-    [
-      {
-        name: 'vuepress-plugin-foo',
-        computed: {
-          $version: function() {
-            return 'asfasd';
-          }
-        }
-      },
     ]
   ],
 }
