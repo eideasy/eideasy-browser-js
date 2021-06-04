@@ -89,6 +89,7 @@ async function main() {
   step('\nBuilding ...');
   if (!skipBuild && !isDryRun) {
     await run('yarn', ['build']);
+    await run('yarn', ['docs:build']);
   } else {
     console.log('(skipped)');
   }

@@ -1,4 +1,6 @@
-const { path } = require('@vuepress/utils')
+const { path } = require('@vuepress/utils');
+const { version } = require('../../package');
+
 module.exports = {
   title: 'eideasy-browser-js',
   description: 'Official eID Easy javascript helper library for web browsers',
@@ -8,6 +10,7 @@ module.exports = {
   themeConfig: {
     repo: '/eideasy/eideasy-browser-js',
     logo: '/assets/img/eid-easy-logo.png',
+    version: version,
     navbar: [
       { text: 'Home', link: '/'},
       { text: 'Guide', link: '/guide/'},
@@ -49,5 +52,15 @@ module.exports = {
         componentsDir: path.resolve(__dirname, './components'),
       },
     ],
+    [
+      {
+        name: 'vuepress-plugin-foo',
+        computed: {
+          $version: function() {
+            return 'asfasd';
+          }
+        }
+      },
+    ]
   ],
 }
