@@ -9,6 +9,8 @@ module.exports = {
   ],
   themeConfig: {
     repo: '/eideasy/eideasy-browser-js',
+    docsBranch: 'master',
+    docsDir: 'docs',
     logo: '/assets/img/eid-easy-logo.png',
     version: version,
     navbar: [
