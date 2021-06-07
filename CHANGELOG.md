@@ -1,3 +1,7 @@
+## [0.1.3-alpha.2](https://github.com/eideasy/eideasy-browser-js/compare/v0.1.3-alpha.1...v0.1.3-alpha.2) (2021-06-07)
+
+
+
 ## [0.1.3-alpha.1](https://github.com/eideasy/eideasy-browser-js/compare/v0.1.3-alpha.0...v0.1.3-alpha.1) (2021-06-04)
 
 
