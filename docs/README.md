@@ -9,9 +9,6 @@ actions:
   type: primary
 ---
 
-## Important !!
-This package is in active development and not production ready.
-
 
 
 

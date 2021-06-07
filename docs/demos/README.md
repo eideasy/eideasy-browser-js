@@ -1,2 +1,2 @@
 # Introduction
-This is a set of demo implementations to get you started.
+Here you can find a set of demo implementations to get you started.
