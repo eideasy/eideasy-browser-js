@@ -9,8 +9,9 @@
 
 # Official eID Easy javascript helper library for web browsers
 
-## Important !!
-This package is in active development and not production ready.
+## Features
+- Create ASiC-E containers in the browser
+- Add XAdES signatures to ASiC-E containers in the browser
 
 ## Documentation
 The docs are available at: https://eideasy-browser-js.netlify.app/
