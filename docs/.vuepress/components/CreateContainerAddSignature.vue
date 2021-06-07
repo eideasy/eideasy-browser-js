@@ -4,8 +4,7 @@ import createAsiceContainer from '../../../src/createAsiceContainer';
 import addSignatureAsice from '../../../src/addSignatureAsice';
 
 const init = function init(rootElem) {
-  // import createAsiceContainer from ''; TODO: our library name here
-  // import addSignatureAsice from ''; TODO: our library name here
+  // import {createAsiceContainer, addSignatureAsice} from '@eid-easy/eideasy-browser-js';
   // import { saveAs } from 'file-saver';
 
   // rootElem is the parent html element of this demo

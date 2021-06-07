@@ -9,4 +9,3 @@ an ASiC-E container is created with those files included.
 
 ## html
 @[code{59-67} html](../.vuepress/components/CreatingAsiceContainer.vue)
-
