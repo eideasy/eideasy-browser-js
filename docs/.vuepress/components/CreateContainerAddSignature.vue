@@ -21,7 +21,7 @@ const init = function init(rootElem) {
     // File objects (https://developer.mozilla.org/en-US/docs/Web/API/File)
     // that you get from the input[type="file"] are Blobs. This means
     // that you can use them directly as an input for the createAsiceContainer method.
-    const files = [...dom.fileInput.files].map((file) => {
+    const files = [...dom.filesInput.files].map((file) => {
       return {
         name: file.name,
         content: file,
