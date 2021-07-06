@@ -7,6 +7,9 @@ actions:
 - text: Get Started
   link: /guide/index.html
   type: primary 
+- text: See Demos
+  link: /demos/index.html
+  type: secondary 
 features:
 - title: Client side
   details: Manipulate ASiC-E containers on the client side i.e. in the end user's browser.
