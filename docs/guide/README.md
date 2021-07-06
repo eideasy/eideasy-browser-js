@@ -41,3 +41,14 @@ import {createAsiceContainer, addSignatureAsice} from '@eid-easy/eideasy-browser
 const {createAsiceContainer, addSignatureAsice} = window.eideasyBrowser;
 ```
 
+## Browser support
+
+### On Windows 10
+- Chrome, two latest versions
+- Firefox, two latest versions
+- Edge, two latest versions
+
+### On macOS
+- Chrome, two latest versions
+- Safari, two latest versions
+
