@@ -14,4 +14,4 @@
 - Add XAdES signatures to ASiC-E containers in the browser
 
 ## Documentation
-The docs are available at: https://eideasy-browser-js.netlify.app/
+The docs are available at: https://eideasy-browser-js.docs.eideasy.com
