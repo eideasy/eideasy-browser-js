@@ -1,3 +1,12 @@
+## [1.0.1](https://github.com/eideasy/eideasy-browser-js/compare/v1.0.0...v1.0.1) (2022-11-09)
+
+
+### Bug Fixes
+
+* use the correct media type when creating manifest file entries ([fcd28f4](https://github.com/eideasy/eideasy-browser-js/commit/fcd28f4556a388c3393b381c11dc96acaff26da5))
+
+
+
 # [1.0.0](https://github.com/eideasy/eideasy-browser-js/compare/v1.0.0-beta.0...v1.0.0) (2021-07-06)
 
 
