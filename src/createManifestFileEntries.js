@@ -8,7 +8,7 @@ const createManifestFileEntries = function createManifestFileEntries(files) {
   for (let i = 0; i < files.length; i += 1) {
     const f = files[i];
     console.log(f);
-    entries += `<manifest:file-entry manifest:full-path="${f.name}" manifest:media-type="${f.content.type}"/>`;
+    entries += `<manifest:file-entry manifest:full-path="${f.name}" manifest:media-type="${f.content.type || 'application/octet-stream'}"/>`;
   }
   return entries;
 };
